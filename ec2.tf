@@ -15,3 +15,6 @@ resource "aws_instance" "ece2_instance" {
     ami  ="0ed99df77a82560e6"
     instance_type="t2.micro"
 }
+output "public_ip"{
+    value=aws_instance.ec2_instance.public_ip
+}
